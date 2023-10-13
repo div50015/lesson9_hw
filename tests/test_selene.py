@@ -1,6 +1,14 @@
 from selene import browser, have, be, by
+import allure
 
 
+@allure.title('Проверка наличия названия Issue в репозитории')
+@allure.tag('web')
+@allure.severity(severity_level='Critical')
+@allure.feature("Issues")
+@allure.story("Тест selene")
+@allure.link("https://github.com/", name='Testing')
+@allure.label('owner', 'div50015')
 def test_selene():
     browser.open('/')
 
